@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canyaman Orphanages Home | Supporting Children</title>
+  <meta name="description" content="Canyaman Orphanages Home — a donation and support website for orphaned children.">
+  <style>
+    :root{
+      --green:#176b4d;
+      --green-dark:#0d4b36;
+      --gold:#e7b84b;
+      --cream:#fffaf0;
+      --text:#23332c;
+      --muted:#64736d;
+      --white:#fff;
+      --shadow:0 12px 35px rgba(23,107,77,.12);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid #e9eee9;backdrop-filter:blur(8px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--green-dark);font-size:1.05rem}
+    .logo{width:42px;height:42px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:21px}
+    nav ul{display:flex;list-style:none;gap:25px;font-weight:600;color:#41544c}
+    nav a:hover{color:var(--green)}
+    .menu{display:none;border:0;background:none;font-size:26px}
+    .hero{background:linear-gradient(120deg,rgba(13,75,54,.94),rgba(23,107,77,.86)),linear-gradient(45deg,#176b4d,#e7b84b);color:#fff;padding:95px 0 85px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}
+    .eyebrow{color:#ffe9a8;text-transform:uppercase;letter-spacing:2px;font-size:.8rem;font-weight:800;margin-bottom:14px}
+    h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.03;margin-bottom:22px}
+    .hero p{font-size:1.15rem;max-width:650px;color:#eef8f3;margin-bottom:30px}
+    .buttons{display:flex;gap:13px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:13px 21px;border-radius:8px;font-weight:800;transition:.2s}
+    .btn-primary{background:var(--gold);color:#2e2814}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-light{background:#fff;color:var(--green-dark)}
+    .hero-card{background:#fff;color:var(--text);padding:28px;border-radius:18px;box-shadow:var(--shadow)}
+    .hero-card .heart{font-size:48px}
+    .hero-card h3{font-size:1.5rem;color:var(--green-dark);margin:8px 0}
+    section{padding:78px 0}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 42px}
+    .section-head h2{font-size:2.25rem;color:var(--green-dark);margin-bottom:10px}
+    .section-head p{color:var(--muted)}
+    .about{background:var(--cream)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+    .about-box{background:#fff;border-radius:18px;padding:34px;box-shadow:var(--shadow)}
+    .about-box h3{font-size:1.7rem;color:var(--green-dark);margin-bottom:12px}
+    .values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}
+    .value{padding:20px;background:#f8fbf9;border-radius:13px}
+    .value strong{display:block;color:var(--green);margin-bottom:5px}
+    .donate{background:var(--green-dark);color:#fff}
+    .donate .section-head h2{color:#fff}
+    .donate .section-head p{color:#d9e9e1}
+    .donate-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .donate-card{background:#fff;color:var(--text);border-radius:16px;padding:30px}
+    .donate-card h3{color:var(--green-dark);margin-bottom:10px}
+    .donate-card p{color:var(--muted)}
+    .contact{background:#f7faf8}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+    .contact-card{background:#fff;padding:30px;border-radius:16px;box-shadow:var(--shadow)}
+    .contact-item{padding:17px 0;border-bottom:1px solid #edf0ee}
+    .contact-item:last-child{border-bottom:0}
+    .contact-item strong{display:block;color:var(--green-dark);margin-bottom:3px}
+    .notice{margin-top:20px;padding:14px 16px;background:#fff7dc;border-left:4px solid var(--gold);border-radius:7px;color:#5c4b1d;font-size:.92rem}
+    footer{background:#092f22;color:#d9e9e1;padding:35px 0}
+    .footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    footer strong{color:#fff}
+    .small{font-size:.88rem;color:#a9c2b7}
+    @media(max-width:800px){
+      nav ul{display:none}
+      .menu{display:block}
+      .hero-grid,.about-grid,.donate-grid,.contact-grid{grid-template-columns:1fr}
+      .values{grid-template-columns:1fr}
+      .hero{padding:70px 0}
+      section{padding:60px 0}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home"><span class="logo">❤</span> Canyaman Orphanages Home</a>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div style="background:#0d4b36;color:white;text-align:center;padding:18px 12px;font-size:18px;line-height:1.7;position:relative;z-index:5;">
+  <strong>Contact Us for Donation Information</strong><br>
+  <span>WhatsApp: <a href="https://wa.me/12492984807" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;font-weight:700;">+1 (249) 298-4807</a></span>
+  &nbsp; | &nbsp;
+  <span>Zangi: <strong>334499833</strong></span>
+</div>
+
+<main id="home">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Care • Hope • Opportunity</div>
+        <h1>Every child deserves a safe place to grow.</h1>
+        <p>
+          Welcome to Canyaman Orphanages Home. Our mission is to encourage
+          compassion and support for orphaned children through donations,
+          care and community support.
+        </p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#donate">Support the Children</a>
+          <a class="btn btn-light" href="#contact">Contact Us</a>
+        </div>
+        <div style="margin-top:24px;padding:20px;background:#fff;border-radius:16px;box-shadow:var(--shadow);">
+          <h3 style="color:#0d4b36;margin-bottom:10px;">Contact Information</h3>
+          <p style="margin:7px 0;"><strong>WhatsApp:</strong> <a href="https://wa.me/12492984807" target="_blank" rel="noopener">+1 (249) 298-4807</a></p>
+          <p style="margin:7px 0;"><strong>Zangi:</strong> 334499833</p>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="heart">💚</div>
+        <h3>Your kindness can make a difference.</h3>
+        <p>Whether you donate, volunteer or share our mission, every act of kindness can help create hope for a child.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-head">
+        <h2>About Canyaman Orphanages Home</h2>
+        <p>A place for people who want to stand with children and help create brighter possibilities.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-box">
+          <h3>Our Mission</h3>
+          <p>
+            Canyaman Orphanages Home is presented as a charitable initiative
+            focused on supporting orphaned children. We believe children
+            deserve dignity, care, education and opportunities to build a
+            positive future.
+          </p>
+          <div class="values">
+            <div class="value"><strong>Care</strong>Putting children first.</div>
+            <div class="value"><strong>Hope</strong>Creating brighter possibilities.</div>
+            <div class="value"><strong>Community</strong>Bringing caring people together.</div>
+          </div>
+        </div>
+        <div class="about-box">
+          <h3>How You Can Help</h3>
+          <p>
+            You can support the mission by making a donation, sharing the
+            foundation with friends, or contacting the team to learn about
+            available support opportunities.
+          </p>
+          <p class="notice">
+            Please verify the foundation's registration, donation destination,
+            and intended use of funds independently before sending money.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="container">
+      <div class="section-head">
+        <h2>Support for Children</h2>
+        <p>Donations and community support can be directed toward children's needs and wellbeing.</p>
+      </div>
+      <div class="values">
+        <div class="about-box">
+          <h3>Daily Care</h3>
+          <p>Support can help with essential day-to-day needs such as food, clothing and personal care.</p>
+        </div>
+        <div class="about-box">
+          <h3>Education</h3>
+          <p>Support can contribute toward learning materials, school-related needs and educational opportunities.</p>
+        </div>
+        <div class="about-box">
+          <h3>Wellbeing</h3>
+          <p>Support can help provide a safer and more caring environment where children can grow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="donate" class="donate">
+    <div class="container">
+      <div class="section-head">
+        <h2>Make a Donation</h2>
+        <p>Your generosity can help support children in need. Contact us first for current donation instructions.</p>
+      </div>
+      <div class="donate-grid">
+        <div class="donate-card">
+          <h3>Donate or Ask How to Give</h3>
+          <p>For donation information, please contact the foundation through WhatsApp or Zangi using the details below.</p>
+          <br>
+          <a class="btn btn-primary" href="https://wa.me/12492984807" target="_blank" rel="noopener">Message on WhatsApp</a>
+        </div>
+        <div class="donate-card">
+          <h3>Share the Mission</h3>
+          <p>If you are unable to donate, sharing this page with friends and family can help the message reach more people who may be able to help.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contact Us</h2>
+        <p>Reach out for donation information, partnership questions or general enquiries.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-item">
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/12492984807" target="_blank" rel="noopener">+1 (249) 298-4807</a>
+          </div>
+          <div class="contact-item">
+            <strong>Zangi</strong>
+            <span>334499833</span>
+          </div>
+          <div class="contact-item">
+            <strong>Website</strong>
+            <span>Canyaman Orphanages Foundation</span>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3 style="color:#0d4b36;margin-bottom:10px;">Let's help children find hope.</h3>
+          <p>
+            For your safety, always confirm the official identity of a
+            charitable organization and verify payment details before making
+            a donation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><strong>Canyaman Orphanages Home</strong><br><span class="small">Supporting children with care, hope and community.</span></div>
+    <div class="small">© 2026 Canyaman Orphanages Home. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
