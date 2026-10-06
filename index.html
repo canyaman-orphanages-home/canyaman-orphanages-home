@@ -70,6 +70,14 @@
     .footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     footer strong{color:#fff}
     .small{font-size:.88rem;color:#a9c2b7}
+
+    .flyer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .flyer-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid #e9eee9}
+    .flyer-card img{display:block;width:100%;height:auto}
+    .flyer-card figcaption{padding:15px 16px;font-weight:700;color:var(--green-dark);text-align:center}
+    .gallery-note{text-align:center;color:var(--muted);max-width:760px;margin:-20px auto 32px}
+    @media(max-width:800px){.flyer-grid{grid-template-columns:1fr}}
+
     @media(max-width:800px){
       nav ul{display:none}
       .menu{display:block}
@@ -102,7 +110,7 @@
   <strong>Contact Us for Donation Information</strong><br>
   <span>WhatsApp: <a href="https://wa.me/12492984807" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;font-weight:700;">+1 (249) 298-4807</a></span>
   &nbsp; | &nbsp;
-  <span>Zangi: <strong>334499833</strong></span>
+  <span>Zangi: <strong>3324499833</strong></span>
 </div>
 
 <main id="home">
@@ -123,7 +131,7 @@
         <div style="margin-top:24px;padding:20px;background:#fff;border-radius:16px;box-shadow:var(--shadow);">
           <h3 style="color:#0d4b36;margin-bottom:10px;">Contact Information</h3>
           <p style="margin:7px 0;"><strong>WhatsApp:</strong> <a href="https://wa.me/12492984807" target="_blank" rel="noopener">+1 (249) 298-4807</a></p>
-          <p style="margin:7px 0;"><strong>Zangi:</strong> 334499833</p>
+          <p style="margin:7px 0;"><strong>Zangi:</strong> 3324499833</p>
         </div>
       </div>
       <div class="hero-card">
@@ -194,7 +202,35 @@
     </div>
   </section>
 
-  <section id="donate" class="donate">
+  
+<section id="flyers" class="about">
+  <div class="container">
+    <div class="section-head">
+      <h2>Our Flyers &amp; Community Message</h2>
+      <p>Explore the Canyaman Orphanages Home Foundation flyers prepared to share the mission and ways people can support children.</p>
+    </div>
+    <p class="gallery-note">Please verify the foundation's registration, donation destination, and intended use of funds independently before sending money.</p>
+
+    <div class="flyer-grid">
+      <figure class="flyer-card">
+        <img src="Together We Can Change Lives.png" alt="Canyaman Orphanages Home Foundation support our children flyer" loading="lazy">
+        <figcaption>Together We Can Change Lives</figcaption>
+      </figure>
+
+      <figure class="flyer-card">
+        <img src="Donate for a Brighter Tomorrow.png" alt="Canyaman Orphanages Home Foundation donate for a brighter tomorrow flyer" loading="lazy">
+        <figcaption>Donate for a Brighter Tomorrow</figcaption>
+      </figure>
+
+      <figure class="flyer-card">
+        <img src="Together, We Can Change Lives.png" alt="Canyaman Orphanages Home Foundation donation and support flyer" loading="lazy">
+        <figcaption>Together, We Can Change Lives</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="donate" class="donate">
     <div class="container">
       <div class="section-head">
         <h2>Make a Donation</h2>
@@ -229,7 +265,7 @@
           </div>
           <div class="contact-item">
             <strong>Zangi</strong>
-            <span>334499833</span>
+            <span>3324499833</span>
           </div>
           <div class="contact-item">
             <strong>Website</strong>
