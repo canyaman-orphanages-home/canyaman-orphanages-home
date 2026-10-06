@@ -291,6 +291,14 @@
     <div class="small">© 2026 Canyaman Orphanages Home. All rights reserved.</div>
   </div>
 </footer>
+<script>
+const menuBtn = document.querySelector('.menu');
+const navList = document.querySelector('nav ul');
 
+menuBtn.addEventListener('click', function() {
+  navList.style.display =
+    navList.style.display === 'flex' ? 'none' : 'flex';
+});
+</script>
 </body>
 </html>
